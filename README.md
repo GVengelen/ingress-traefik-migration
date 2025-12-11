@@ -6,7 +6,7 @@ This guide is hands-on. We'll start with a KIND cluster running ingress-nginx, m
 
 ## Why Start with Traefik?
 
-As I mentioned in Part 1, Traefik offers the smoothest migration path thanks to its NGINX provider, which automatically translates about 80% of common ingress-nginx annotations. This means you can migrate quickly with minimal code changes, then progressively adopt Gateway API features at your own pace.
+As I mentioned in Part 1, Traefik offers the smoothest migration path. This means you can migrate quickly with minimal code changes, then progressively adopt Gateway API features at your own pace.
 
 ## What do you need
 
@@ -17,7 +17,7 @@ For this tutorial, you'll need:
 - KIND
 - Helm
 
-## Part 1: Setting Up the Baseline (ingress-nginx)
+## Part 1: Setting Up the Baseline(ingress-nginx)
 
 Let's start by creating a KIND cluster with ingress-nginx, similar to what you're probably running in production.
 
@@ -917,4 +917,4 @@ kind delete cluster --name ingress-migration
 
 ---
 
-_All code examples from this post are available in my [GitHub repository](link-to-repo)._
+_All code examples from this post are available in my [GitHub repository](https://github.com/GVengelen/ingress-traefik-migration)._
