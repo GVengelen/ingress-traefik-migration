@@ -1,0 +1,35 @@
+ingressRoute:
+  dashboard:
+    enabled: true
+
+service:
+  type: LoadBalancer
+
+providers:
+  kubernetesIngress:
+    enabled: false
+    allowExternalNameServices: true
+    ingressClass: traefik
+    nativeLBByDefault: true
+    allowEmptyServices: true
+    namespaces: []
+  kubernetesGateway:
+    enabled: true
+
+ports:
+  web:
+    port: 8000
+    exposedPort: 80
+    protocol: TCP
+    hostPort: 80
+  websecure:
+    port: 8443
+    exposedPort: 443
+    protocol: TCP
+    hostPort: 443
+
+logs:
+  general:
+    level: INFO
+  access:
+    enabled: true

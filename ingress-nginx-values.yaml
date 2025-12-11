@@ -1,0 +1,19 @@
+controller:
+  hostPort:
+    enabled: true
+  service:
+    type: NodePort
+
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: false
+
+  publishService:
+    enabled: false
+
+  extraArgs:
+    v: 2
+
+podSecurityPolicy:
+  enabled: false
